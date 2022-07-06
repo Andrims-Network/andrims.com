@@ -1,2 +1,2 @@
-# andrims.com-site
+# andrims.com
 Andrims Networks' main webpage for visitors
