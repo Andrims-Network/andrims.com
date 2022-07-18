@@ -29,7 +29,6 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #0B132B;
-  cursor: pointer;
   position: fixed;
   width: 100%;
   top: 0;
@@ -45,20 +44,24 @@ li a {
   color: white;
   text-align: center;
   padding: 2.25vh 16px;
-/*   text-decoration: none;
-  cursor: pointer; */
+  text-decoration: none;
+  cursor: pointer;
 }
 .andrims-nav{
   left: 7vh;
   position: absolute;
+  text-shadow:1px 1px 10px #fff, 1px 1px 6px #ccc;
+  font-family: 'Lack', 'Montserrat';
 }
-
-li a:hover:not(.active) {
+.andrims-nav:hover{
+  background: transparent;
+}
+li a:hover:not(.active,.andrims-nav) {
   background-color: #111;
 }
 
 .active {
-  background-color: #0B132B;
+  background-color: #0B132B !important;
   filter: brightness(120%);
   font-weight: bold;
 }
@@ -90,7 +93,7 @@ footer{
   padding: 0;
 }
 #title p{
-	font: 'Lato', "Montserrat";
+	font: 'Lato', 'Montserrat';
 }
 
 #title div{
