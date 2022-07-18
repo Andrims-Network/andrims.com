@@ -1,37 +1,119 @@
 @font-face {
     font-family: Lack;
-    src: url(/assets/fonts/lack-regular.otf);
+    src: url('/assets/fonts/lack-regular.otf');
 }
 @font-face {
     font-family: Lack-Line;
-    src: url(/assets/fonts/lack-line-regular.otf);
+    src: url('/assets/fonts/lack-line-regular.otf');
 }
 @font-face {
     font-family: Lato;
-    src: url(/assets/fonts/Lato-Regular.ttf);
+    src: url('/assets/fonts/Lato-Regular.ttf');
 }
 
+body {
+  background: #1C2541;
+  color: #fff;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
-header{
-    padding: 5px;
-    margin: 0.2vh;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0B132B;
+  cursor: pointer;
 }
 
-#headerLogo{
-    font-family: Lack, Montserrat;
-    font-weight: bold;
-    align-items: Left;
+li {
+  float: left;
+  z-index: 9999;
 }
 
-#headerItems{
-    font-family: Lato/* , Arial, Helvetica, sans-serif */;
-    margin-left: 13vw;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+/*   text-decoration: none;
+  cursor: pointer; */
+}
 
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-evenly;
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #0B132B;
+  filter: brightness(120%);
+}
+footer{
+  bottom: 0;
+  position: relative;
+}
+
+
+#title{
+  color: #B4C5E4;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%,-60%);
+}
+#title h1{
+	font: 'Lack', 'Montserrat';
+  font-size: 500%;
+  margin: 0;
+  padding: 0;
+}
+#title div{
+  height: 5px;
+  width: 20%;
+  position: relative;
+  left: 40%;
+  background: #B4C5E4;
+}
+
+#wave-1{
+  background: transparent;
+  position: absolute;
+  top: 63.5vh;
+}
+#bg,body, section, #main{
+    margin: 0;
+  padding: 0;
+}
+#bg{
+  position: absolute;
+  height: 30vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.shape {
+  background: #3A506B;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  transition: all 1s ease-in-out;
+  z-index: -1;
+  position: relative;
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }
