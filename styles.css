@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Lack;
+    font-family: 'Lack';
     src: url('/assets/fonts/lack-regular.otf');
 }
 @font-face {
@@ -55,6 +55,7 @@ li a {
   position: absolute;
   text-shadow:1px 1px 10px #fff, 1px 1px 6px #ccc;
   font-family: 'Lack', 'Montserrat';
+  font-size: 2.65vh;
 }
 .andrims-nav:hover{
   background: transparent;
@@ -87,15 +88,14 @@ li a:hover:not(.active,.andrims-nav) {
   transform: translate(-50%,-60%);
 }
 #title h1{
-	font: 'Lack', 'Montserrat';
+	font-family: Lack, 'Montserrat';
   font-size: 500%;
   margin: 0;
   padding: 0;
 }
 #title p{
-	font: 'Lato', 'Montserrat';
+	font-family: Lato, 'Montserrat';
 }
-
 #title div{
   height: 5px;
   width: 20%;
