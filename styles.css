@@ -6,6 +6,7 @@
   padding: 0;
   scroll-behavior: smooth;
   user-select: none;
+  overflow: hidden;
 }
 
 #landing{
@@ -14,17 +15,6 @@
   text-align: center;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-#about{
-  height: 100vh;
-  background: transparent;
-  text-align: center;
-  position: absolute;
-  top: 100vh;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -62,14 +52,14 @@
   color: #848484;
 }
 .l-title{
-  padding-top: 30vh;
+  padding-top: 20vh;
   font-family: 'Playfair Display', serif;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 .l-desc{
   font-family: 'Lato', sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .particle{
