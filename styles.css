@@ -32,8 +32,9 @@
   text-align: center;
   position: absolute;
   padding: 0;
+  padding-right: 0px;
   top: 0vh;
-  width: 100%;
+  width: 98%;
   left:0%;
   z-index: 3;
   display: flex;
