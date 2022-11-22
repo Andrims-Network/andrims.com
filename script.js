@@ -28,17 +28,19 @@ const windowHeight = 50 + (window.innerHeight / 5);
 document.body.addEventListener("mousemove", function(e) {
   const mouseX = e.clientX / windowWidth;
   const mouseY = e.clientY / windowHeight;
-  console.log(e.clientX);
   bg.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
 });
 //End BG Interactive
 
 //Mouse Following
-document.body.addEventListener('mousemove', function(e) {
-  let circle = document.getElementById('circle');
-  let left = e.offsetX;
-  let top = e.offsetY;
-  circle.style.left = left + 'px';
-  circle.style.top = top + 'px';
-});
+
+const cursorSmall = document.getElementById('circle');
+const positionElement = (e)=> {
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+   
+  cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+}
+
+window.addEventListener('mousemove', positionElement)
 //End Mouse Following
