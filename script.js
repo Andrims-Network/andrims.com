@@ -33,7 +33,7 @@ document.body.addEventListener("mousemove", function(e) {
 //End BG Interactive
 
 //Mouse Following
-
+/*
 const cursorSmall = document.getElementById('circle');
 const positionElement = (e)=> {
   const mouseY = e.clientY;
@@ -42,5 +42,5 @@ const positionElement = (e)=> {
   cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
 }
 
-window.addEventListener('mousemove', positionElement)
+window.addEventListener('mousemove', positionElement)*/
 //End Mouse Following
