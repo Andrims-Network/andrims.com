@@ -20,7 +20,7 @@ for (var i = 0; i < random(500, 1000, 0); i++) {
 }
 //End Background JS
 //Start BG Interactive
-
+//Bug rn is that if u move ur cursor up then the whole container goes up and particles dissapear sooner then they're supposed to. Not really an issue but if ur bored and u have time try figuring this out.
 const bg = document.getElementById('part-cont');
 const windowWidth = 50 + (window.innerWidth / 5);
 const windowHeight = 50 + (window.innerHeight / 5);
