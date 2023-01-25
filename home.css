@@ -9,10 +9,8 @@
   height: 160px;
   max-width: 500px;
   text-transform: uppercase;
-  border: 1px solid rgba(0,0,0,0.5);
   text-decoration: none;
   line-height: 160px;
-  color: black;
   margin: 20px;
 	text-align: center;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
@@ -27,12 +25,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #000;
   transform: translateX(-100%);
 }
-.big-boi-link:hover {
-  color: #fff;
-}
+
 .big-boi-link:hover:before {
   transition: 0.5s ease-in-out;
   z-index: -1;
@@ -69,4 +64,41 @@
   font-size: 1.75rem;
   position: relative;
   top: 26vh;
+}
+
+
+/*Light Dark Theme CSS*/
+@media (prefers-color-scheme: dark) {
+  body{
+    background: #000000;
+  }
+  .l-desc{
+    color: white;
+  }
+  .l-title{
+    color: white;
+  }
+  .big-boi-link{
+    color: white;
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+  .big-boi-link:hover {
+  color: #000000;
+  }
+  .big-boi-link:before{
+    background: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .big-boi-link{
+    color: black;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
+  .big-boi-link:hover {
+    color: #fff;
+  }
+  .big-boi-link:before{
+    background: black;
+  }
 }

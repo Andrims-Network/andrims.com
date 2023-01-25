@@ -7,15 +7,16 @@
   padding: 0;
   margin: 0;
 }
+body{
+  transition: 0.5s;
+}
 #nav-bar{
   height: 6vh;
-  background: rgba(255, 255, 255, 0.3);
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 3px solid rgba(255, 255, 255, 0.09);
   text-align: center;
   position: absolute;
   padding: 0;
@@ -32,16 +33,12 @@
   position: relative;
   top: 0vh;
   text-decoration: none;
-  color: black;
   font-family: 'Lato', sans-serif;
   transition: 0.25s;
 }
-.link:hover{
-  color: #848484;
-}
+
 .particle{
   position: absolute !important;
-  background: #000;
   border-radius: 50%;
 }
 @keyframes animParticle {
@@ -132,10 +129,10 @@ footer{
 
 .error404{
   display: flex;
-	flex-wrap: wrap
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-	margin-top: 49vh;
+  margin-top: 49vh;
   font-family:"Nunito Sans";
 }
 h1.error404{
@@ -146,4 +143,49 @@ h1.error404{
 
 h2.error404{
 	font-weight:bold;
+}
+
+/*Light Dark Theme CSS*/
+@media (prefers-color-scheme: dark) {
+  .copyright{
+    color: white;
+  }
+  .copy-link{
+    color: white;
+  }
+  .particle{
+    background: #fff;
+  }
+  #nav-bar{
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .link{
+    color: white;
+  }
+  .link:hover{
+  color: #848484;
+  } 
+}
+
+@media (prefers-color-scheme: light) {
+  .copy-link{
+    color: black;
+  }
+  .copyright{
+    color: black;
+  }
+  .particle{
+    background: #000;
+  }
+  #nav-bar{
+    border: 3px solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .link{
+    color: black;
+  }
+  .link:hover{
+  color: #848484;
+  } 
 }
