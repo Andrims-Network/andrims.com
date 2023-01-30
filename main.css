@@ -147,6 +147,9 @@ h2.error404{
 
 /*Light Dark Theme CSS*/
 @media (prefers-color-scheme: dark) {
+  body{
+    background: #000000;
+  }
   .copyright{
     color: white;
   }
@@ -169,6 +172,9 @@ h2.error404{
 }
 
 @media (prefers-color-scheme: light) {
+  body{
+    background: #fff;
+  }
   .copy-link{
     color: black;
   }
