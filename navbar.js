@@ -6,6 +6,7 @@ function insertNavbar(){
   }
   
   const query = window.matchMedia('(prefers-color-scheme: dark)');
+  const favicon = document.getElementById("favicon");
 
   fn(query.matches);
 
@@ -23,7 +24,7 @@ runColorMode((isDarkMode) => {
 
        		document.querySelector('footer').innerHTML = `<p class='copyright'><b>By using this site, you agree to the <u><span id='myBtn'>Andrims Privacy Policy</span></u>.</b><br>For any questions or concerns, please contact us. <a target='_blank' href='mailto:hello@andrims.com'>hello@andrims.com</a></p>`;
     
-            document.getElementById("favicon").setAttribute("href", "/assets/v3-lightpng-large.png");
+      changeFav("light");
   } else {
     
 		document.getElementById('nav-bar').innerHTML = `    
@@ -35,7 +36,7 @@ runColorMode((isDarkMode) => {
 
        		document.querySelector('footer').innerHTML = `<p class='copyright'><b>By using this site, you agree to the <u><span id='myBtn'>Andrims Privacy Policy</span></u>.</b><br>For any questions or concerns, please contact us. <a target='_blank' href='mailto:hello@andrims.com'>hello@andrims.com</a></p>`;
   }
-            document.getElementById("favicon").setAttribute("href", "/assets/v3-darkpng-large.png");
+    changeFav("dark");
 
 })
 }
@@ -65,5 +66,16 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+
+function changeFav(theme){
+  if(theme == 'dark'){
+    alert('dark mode favicon set');
+    favicon.setAttribute("href", "/assets/v3-lightpng-large.png");
+  }
+  else{
+    alert('light mode favicon set')
+  favicon.setAttribute("href", "/assets/v3-darkpng-large.png");
   }
 }

@@ -91,7 +91,7 @@
   .big-boi-link{
     color: black;
     border: 1px solid rgba(0,0,0,0.5);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   }
   .big-boi-link:hover {
     color: #fff;
