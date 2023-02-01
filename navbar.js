@@ -71,11 +71,11 @@ window.onclick = function(event) {
 
 function changeFav(theme){
   if(theme == 'dark'){
-    alert('dark mode favicon set');
+    console.log('dark mode favicon set');
     favicon.setAttribute("href", "/assets/v3-lightpng-large.png");
   }
   else{
-    alert('light mode favicon set')
+    console.log('light mode favicon set')
   favicon.setAttribute("href", "/assets/v3-darkpng-large.png");
   }
 }
