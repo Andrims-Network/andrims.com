@@ -15,6 +15,7 @@ function insertNavbar(){
 
 runColorMode((isDarkMode) => {
   if (isDarkMode) {
+    console.log('dark mode favicon set')
 		document.getElementById('nav-bar').innerHTML = `    
 		    <a href='/' class='link'><span class='link-down'>Home</span></a>
 		    <a href='/about/' class='link'><span class='link-down'>About</span></a>
@@ -24,9 +25,9 @@ runColorMode((isDarkMode) => {
 
        		document.querySelector('footer').innerHTML = `<p class='copyright'><b>By using this site, you agree to the <u><span id='myBtn'>Andrims Privacy Policy</span></u>.</b><br>For any questions or concerns, please contact us. <a target='_blank' href='mailto:hello@andrims.com'>hello@andrims.com</a></p>`;
     
-      changeFav("light");
+  favicon.setAttribute("href", "/assets/v3-lightpng-large.png");
   } else {
-    
+    console.log('light mode favicon set')
 		document.getElementById('nav-bar').innerHTML = `    
 		    <a href='/' class='link'><span class='link-down'>Home</span></a>
 		    <a href='/about/' class='link'><span class='link-down'>About</span></a>
@@ -35,8 +36,8 @@ runColorMode((isDarkMode) => {
 		    <a href='/services/' class='link'><span class='link-down'>Services</span></a>`;
 
        		document.querySelector('footer').innerHTML = `<p class='copyright'><b>By using this site, you agree to the <u><span id='myBtn'>Andrims Privacy Policy</span></u>.</b><br>For any questions or concerns, please contact us. <a target='_blank' href='mailto:hello@andrims.com'>hello@andrims.com</a></p>`;
+    favicon.setAttribute("href", "/assets/v3-darkpng-large.png");
   }
-    changeFav("dark");
 
 })
 }
@@ -69,13 +70,3 @@ window.onclick = function(event) {
   }
 }
 
-function changeFav(theme){
-  if(theme == 'dark'){
-    console.log('dark mode favicon set');
-    favicon.setAttribute("href", "/assets/v3-lightpng-large.png");
-  }
-  else{
-    console.log('light mode favicon set')
-  favicon.setAttribute("href", "/assets/v3-darkpng-large.png");
-  }
-}
