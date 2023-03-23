@@ -1,0 +1,15 @@
+/* https://codepen.io/kingmeers/pen/vGKoxj */
+#particles{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.p{
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
